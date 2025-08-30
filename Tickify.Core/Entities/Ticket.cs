@@ -14,12 +14,12 @@ namespace Tickify.Core.Entities
         public DateTime? UsedAt { get; set; }
 
         public int EventId { get; set; }
-        public Event Event { get; set; } = null!;
+        public virtual Event Event { get; set; } = null!;
 
         public int? UserId { get; set; }
-        public ApplicationUser? User { get; set; }
+        public virtual ApplicationUser? User { get; set; }
 
         public int? PaymentId { get; set; }
-        public Payment? Payment { get; set; }
+        public virtual Payment? Payment { get; set; }
     }
 }

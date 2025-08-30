@@ -16,9 +16,9 @@ namespace Tickify.Core.Entities
         public DateTime? UpdatedAt { get; set; }
 
         public int OrganizerId { get; set; }
-        public ApplicationUser Organizer { get; set; } = null!;
+        public virtual ApplicationUser Organizer { get; set; } = null!;
 
-        public ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
-        public ICollection<EventCategory> EventCategories { get; set; } = new List<EventCategory>();
+        public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
+        public virtual ICollection<EventCategory> EventCategories { get; set; } = new List<EventCategory>();
     }
 }

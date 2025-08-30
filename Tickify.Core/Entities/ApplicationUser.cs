@@ -8,8 +8,8 @@ namespace Tickify.Core.Entities
         public string FullName { get; set; } = null!;
         public DateTime? RegistrationDate { get; set; }
 
-        public ICollection<Event> OrganizedEvents { get; set; } = new List<Event>();
-        public ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
-        public ICollection<Payment> Payments { get; set; } = new List<Payment>();
+        public virtual ICollection<Event> OrganizedEvents { get; set; } = new List<Event>();
+        public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
+        public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
     }
 }

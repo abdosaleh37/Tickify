@@ -9,10 +9,11 @@ using Tickify.Infrastructure.Data;
 
 namespace Tickify.Infrastructure.Repositories
 {
-    public class PaymentRepository : BaseRepository<Payment>, IPaymentRepository
+    public class ApplicationUserRepository : BaseRepository<ApplicationUser>, IApplicatonUserRepository
     {
         private readonly ApplicationDbContext _context;
-        public PaymentRepository(ApplicationDbContext context) : base(context)
+
+        public ApplicationUserRepository(ApplicationDbContext context) : base(context)
         {
             _context = context;
         }

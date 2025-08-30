@@ -5,10 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Tickify.Core.Entities;
 using Tickify.Core.Interfaces.Repositories;
+using Tickify.Infrastructure.Data;
 
 namespace Tickify.Infrastructure.Repositories
 {
     public class EventRepository : BaseRepository<Event>, IEventRepository
     {
+        private readonly ApplicationDbContext _context;
+        public EventRepository(ApplicationDbContext context) : base(context)
+        {
+            _context = context;
+        }
     }
 }

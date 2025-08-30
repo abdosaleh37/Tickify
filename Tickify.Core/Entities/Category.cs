@@ -10,6 +10,6 @@ namespace Tickify.Core.Entities
         public string? Description { get; set; }
         public bool IsActive { get; set; } = true;
 
-        public ICollection<EventCategory> EventCategories { get; set; } = new List<EventCategory>();
+        public virtual ICollection<EventCategory> EventCategories { get; set; } = new List<EventCategory>();
     }
 }
