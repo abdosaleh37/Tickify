@@ -7,7 +7,7 @@ using Tickify.Core.Entities;
 
 namespace Tickify.Core.Interfaces.Repositories
 {
-    public interface IApplicatonUserRepository : IBaseRepository<ApplicationUser>
+    public interface IApplicationUserRepository : IBaseRepository<ApplicationUser>
     {
     }
 }

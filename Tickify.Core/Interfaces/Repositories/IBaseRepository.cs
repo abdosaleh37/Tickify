@@ -16,7 +16,7 @@ namespace Tickify.Core.Interfaces.Repositories
         Task<TEntity?> GetByIdAsync(int id);
         Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate);
         Task<TEntity?> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
-        
+
         // Update
         Task UpdateAsync(TEntity entity);
 

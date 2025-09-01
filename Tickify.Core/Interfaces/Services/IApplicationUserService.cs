@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tickify.Core.Interfaces.Services
 {
-    public interface IApplicatonUserService
+    public interface IApplicationUserService
     {
     }
 }

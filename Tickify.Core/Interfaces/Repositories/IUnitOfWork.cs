@@ -8,7 +8,7 @@ namespace Tickify.Core.Interfaces.Repositories
 {
     public interface IUnitOfWork : IDisposable
     {
-        IApplicatonUserRepository ApplicationUsers { get; }
+        IApplicationUserRepository ApplicationUsers { get; }
         ITicketRepository Tickets { get; }
         ICategoryRepository Categories { get; }
         IPaymentRepository Payments { get; }

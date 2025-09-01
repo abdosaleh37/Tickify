@@ -12,7 +12,7 @@ namespace Tickify.Infrastructure.Repositories
     {
         private readonly ApplicationDbContext _context;
 
-        public IApplicatonUserRepository ApplicationUsers { get; private set; }
+        public IApplicationUserRepository ApplicationUsers { get; private set; }
         public ITicketRepository Tickets { get; private set; }
         public ICategoryRepository Categories { get; private set; }
         public IPaymentRepository Payments { get; private set; }
@@ -23,12 +23,12 @@ namespace Tickify.Infrastructure.Repositories
         {
             _context = context;
 
-            ApplicationUsers = new ApplicationUserRepository();
-            Tickets = new TicketRepository();
-            Categories = new CategoryRepository();
-            Payments = new PaymentRepository();
-            EventCategories = new EventCategoryRepository();
-            Events = new EventRepository();
+            ApplicationUsers = new ApplicationUserRepository(_context);
+            Tickets = new TicketRepository(_context);
+            Categories = new CategoryRepository(_context);
+            Payments = new PaymentRepository(_context);
+            EventCategories = new EventCategoryRepository(_context);
+            Events = new EventRepository(_context);
         }
 
         public async Task<int> Complete()

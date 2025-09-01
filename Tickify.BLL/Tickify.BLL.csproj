@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Tickify.Core\Tickify.Core.csproj" />
     <ProjectReference Include="..\Tickify.Infrastructure\Tickify.Infrastructure.csproj" />
   </ItemGroup>

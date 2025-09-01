@@ -9,7 +9,7 @@ using Tickify.Infrastructure.Data;
 
 namespace Tickify.Infrastructure.Repositories
 {
-    public class ApplicationUserRepository : BaseRepository<ApplicationUser>, IApplicatonUserRepository
+    public class ApplicationUserRepository : BaseRepository<ApplicationUser>, IApplicationUserRepository
     {
         private readonly ApplicationDbContext _context;
 
