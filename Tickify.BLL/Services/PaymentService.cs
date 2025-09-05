@@ -8,7 +8,7 @@ using Tickify.Core.Interfaces.Services;
 
 namespace Tickify.BLL.Services
 {
-    internal class PaymentService : IPaymentService
+    public class PaymentService : IPaymentService
     {
         private readonly IUnitOfWork _unitOfWork;
         public PaymentService(IUnitOfWork unitOfWork)

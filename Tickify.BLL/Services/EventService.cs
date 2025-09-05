@@ -8,7 +8,7 @@ using Tickify.Core.Interfaces.Services;
 
 namespace Tickify.BLL.Services
 {
-    internal class EventService : IEventService
+    public class EventService : IEventService
     {
         private readonly IUnitOfWork _unitOfWork;
         public EventService(IUnitOfWork unitOfWork)

@@ -8,7 +8,7 @@ using Tickify.Core.Interfaces.Services;
 
 namespace Tickify.BLL.Services
 {
-    internal class TicketService : ITicketService
+    public class TicketService : ITicketService
     {
         private readonly IUnitOfWork _unitOfWork;
         public TicketService(IUnitOfWork unitOfWork)

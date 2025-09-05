@@ -8,7 +8,7 @@ using Tickify.Core.Interfaces.Services;
 
 namespace Tickify.BLL.Services
 {
-    internal class ApplicationUserService : IApplicationUserService
+    public class ApplicationUserService : IApplicationUserService
     {
         private readonly IUnitOfWork _unitOfWork;
         public ApplicationUserService(IUnitOfWork unitOfWork)

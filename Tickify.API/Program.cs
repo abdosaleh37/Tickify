@@ -1,8 +1,11 @@
 
 using Microsoft.EntityFrameworkCore;
 using Tickify.Core.Interfaces.Repositories;
+using Tickify.Core.Interfaces.Services;
 using Tickify.Infrastructure.Data;
 using Tickify.Infrastructure.Repositories;
+using Tickify.BLL.Services;
+using Tickify.Core.Entities;
 
 namespace Tickify.API
 {
@@ -20,6 +23,8 @@ namespace Tickify.API
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

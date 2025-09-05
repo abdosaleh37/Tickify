@@ -18,11 +18,11 @@ namespace Tickify.Core.Interfaces.Repositories
         Task<TEntity?> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
 
         // Update
-        Task UpdateAsync(TEntity entity);
+        void Update(TEntity entity);
 
         // Delete
-        Task RemoveAsync(TEntity entity);
-        Task RemoveRangeAsync(IEnumerable<TEntity> entities);
+        void Remove(TEntity entity);
+        void RemoveRange(IEnumerable<TEntity> entities);
 
         // Queries
         Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate);

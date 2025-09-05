@@ -23,14 +23,12 @@ namespace Tickify.Infrastructure.Repositories
         public async Task<TEntity> AddAsync(TEntity entity)
         {
             await _context.Set<TEntity>().AddAsync(entity);
-            await _context.SaveChangesAsync();
             return entity;
         }
 
         public async Task AddRangeAsync(IEnumerable<TEntity> entities)
         {
             await _context.Set<TEntity>().AddRangeAsync(entities);
-            await _context.SaveChangesAsync();
         }
 
         // Read
@@ -55,23 +53,20 @@ namespace Tickify.Infrastructure.Repositories
         }
 
         // Update
-        public async Task UpdateAsync(TEntity entity)
+        public void Update(TEntity entity)
         {
-            _context.Set<TEntity>().Update(entity);
-            await _context.SaveChangesAsync();
+             _context.Set<TEntity>().Update(entity);
         }
 
         // Delete
-        public async Task RemoveAsync(TEntity entity)
+        public void Remove(TEntity entity)
         {
             _context.Set<TEntity>().Remove(entity);
-            await _context.SaveChangesAsync();
         }
 
-        public async Task RemoveRangeAsync(IEnumerable<TEntity> entities)
+        public void RemoveRange(IEnumerable<TEntity> entities)
         {
             _context.Set<TEntity>().RemoveRange(entities);
-            await _context.SaveChangesAsync();
         }
 
         // Queries
